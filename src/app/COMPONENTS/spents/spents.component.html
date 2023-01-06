@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <div class="content_enter_budget">
+        <h1 class="title">Gastos</h1>
+        <form #spent="ngForm" (ngSubmit)="handleSpent(spent)">
+          <div class="mb-3">
+            <label for="datail" class="form-label">Detalle</label>
+            <input id="datail" type="text" class="form-control" name="detail" ngModel>
+          </div>
+          <div class="mb-3">
+            <label for="spent" class="form-label">Cantidad</label>
+            <input id="spent" type="number" class="form-control" name="spent_value" ngModel>
+          </div>
+          <button type="submit" class="btn btn-primary button_center">Ingresar</button>
+          <span (click)="showBudget('budget')" class="text_span">Agregar nuevo ingreso</span>
+        </form>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="content_spent">
+        <div class="total_spent">
+          <span class="paragraph">Presupuesto</span>
+          <div class="result">
+            <span class="paragraph">{{suma_budget}}</span>
+          </div>
+        </div>
+        <div class="total_spent">
+          <span class="paragraph">Total presupuesto</span>
+          <div class="result">
+            <span class="paragraph">{{diferencia}}</span>
+          </div>
+        </div>
+      </div>
+      <div class="content_spent">
+        <div class="list_spent">
+          <div class="list" *ngFor="let spent of res_spent">
+            <div class="result_two"><span class="detalle">{{spent.detail}}</span></div>
+            <div class="result_two"><span class="valor">{{spent.spent}}</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+<ng-container *ngIf="checkin">
+  <app-checkin (login)="showLogin($event)"></app-checkin>
+</ng-container>
+<ng-container *ngIf="login">
+  <app-login (checkin)="showCheckin($event)"></app-login>
+</ng-container>

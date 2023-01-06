@@ -1,0 +1,11 @@
+<div class="header">
+  <h1 class="name_session">{{name_session}}</h1>
+  <button (click)="logout()" class="btn btn-dark">Cerrar sesión</button>
+</div>
+<h1 class="title color_white">Ingresa tu presupuesto</h1>
+<ng-container *ngIf="budget">
+  <app-enter-budget (spent)="showSpent($event)"></app-enter-budget>
+</ng-container>
+<ng-container *ngIf="spent">
+  <app-spents (budget)="showBudget($event)"></app-spents>
+</ng-container>

@@ -1,0 +1,14 @@
+<div class="content_enter_budget">
+  <form #budget="ngForm" (ngSubmit)="handleBudget(budget)">
+    <div class="mb-3">
+      <label for="datail" class="form-label">Detalle</label>
+      <input id="datail" type="text" class="form-control" name="detail" ngModel>
+    </div>
+    <div class="mb-3">
+      <label for="enter_budget" class="form-label">Cantidad</label>
+      <input id="enter_budget" type="number" class="form-control" name="enter_budget" ngModel>
+    </div>
+    <button type="submit" class="btn btn-primary button_center">Ingresar</button>
+    <span (click)="showSpent('spent')" class="text_span">Agregar nuevo gasto</span>
+  </form>
+</div>

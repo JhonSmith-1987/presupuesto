@@ -1,0 +1,16 @@
+<div class="content_form">
+  <h1 class="title">Resgistro de usuario</h1>
+  <form #form_login="ngForm" (ngSubmit)="handleLogin(form_login)">
+    <div class="mb-3">
+      <label for="user" class="form-label">Usuario</label>
+      <input type="text" class="form-control" id="user" name="user" ngModel>
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Contraseña</label>
+      <input type="password" class="form-control" id="password" name="password" ngModel>
+    </div>
+    <button type="submit" class="btn btn-primary button_center">Ingresar</button>
+    <span (click)="showCheckin('checkin')" class="text_span">No te has registrado? registrate aquí...</span>
+  </form>
+</div>
+
